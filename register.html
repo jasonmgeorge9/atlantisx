@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	<title>Atlantis | Register</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+	
+	<!-- ================== BEGIN BASE CSS STYLE =================== -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+    <link href="assets/plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
+    <link href="assets/plugins/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/plugins/font-awesome/4.0/css/font-awesome.css" rel="stylesheet" />
+    <link href="assets/plugins/animate/animate.min.css" rel="stylesheet" />
+    <link href="assets/css/style.min.css" rel="stylesheet" />
+    <link href="assets/css/style-responsive.min.css" rel="stylesheet" />
+    <link href="assets/css/theme/default.css" rel="stylesheet" id="theme" />
+    <link href="assets/plugins/gritter/css/jquery.gritter.css" rel="stylesheet" />
+    <link href="assets/css/atlantis.css" rel="stylesheet"/>
+    <!-- ================== BEGIN BASE CSS STYLE =================== -->
+
+
+    <!-- ================== BEGIN PAGE LEVEL STYLE ================= -->
+    <link href="assets/plugins/parsley/src/parsley.css" rel="stylesheet" />
+    <!-- ================== END PAGE LEVEL STYLE =================== -->
+
+    
+    <!-- ================== BEGIN BASE JS ========================== -->
+    <script src="assets/js/creds.js"></script>
+    <script> checkForLogin() </script>
+    <!-- ================== END BASE JS ============================ -->
+
+    
+</head>
+<body class="bg-black-darker">
+	<!-- begin #page-container -->
+	<div id="page-container" class="fade">
+	    <!-- begin register -->
+        <div class="register register-with-news-feed">
+            <!-- begin news-feed -->
+            <div class="news-feed">
+                <div class="news-image" style="background-image: url(assets/img/register-bg.jpg)"></div>
+                <div class="news-caption">
+                    <h4 class="caption-title"><span class="atlantisHeaderLogo">a </span><b>Atlantis</b> - X</h4>
+                    <p>
+                        As a Color Admin app administrator, you use the Color Admin console to manage your organization’s account, such as add new users, manage security settings, and turn on the services you want your team to access.
+                    </p>
+                </div>
+            </div>
+            <!-- end news-feed -->
+            <!-- begin right-content -->
+            <div class="right-content">
+                <!-- begin register-header -->
+                <div class="register-mobile-header-image hidden-desktop" style="background-image: url(assets/img/register-bg-mobile.jpg)"></div>
+                <h1 class="register-header">
+                    <div>
+                    <span class="hidden-xs">Sign Up</span>
+                    <span class="hidden-desktop"><span class="atlantisHeaderLogo">a </span><b>Atlantis</b> - X</span>
+                    <small class="atlantean">Be Not Afraid of Greatness</small>
+                    </div>
+                </h1>
+                <!-- end register-header -->
+                <!-- begin register-content -->
+                <div class="register-content">
+                    <form action="javascript:register();" class="margin-bottom-0" data-parsley-validate="true" name="reg-form" autocomplete="off">
+                        <label class="control-label">Email</label>
+                        <div class="row m-b-15">
+                            <div class="col-md-12">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Email Address" data-parsley-type="email" data-parsley-required />
+                            </div>
+                        </div>
+                        <label class="control-label">Password</label>
+                        <div class="row m-b-15">
+                            <div class="col-md-12">
+                                <input type="password" class="form-control" id="pass" name="pass" placeholder="Password" data-parsley-required />
+                            </div>
+                        </div>
+                        <label class="control-label">Re-enter Password</label>
+                        <div class="row m-b-15">
+                            <div class="col-md-12">
+                                <input type="password" class="form-control" placeholder="Re-enter Password" data-parsley-equalto="#pass" data-parsley-required />
+                            </div>
+                        </div>
+                        <label class="control-label">Name</label>
+                        <div class="row row-space-10">
+                            <div class="col-md-12 m-b-15">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Full Name" data-parsley-required />
+                            </div>
+                        </div>
+                        <div class="checkbox checkbox-css m-b-30">
+                        	<div class="checkbox checkbox-css m-b-30">
+								<input type="checkbox" id="agreement_checkbox" name="agreement_checkbox" data-checked="false">
+								<label for="agreement_checkbox">
+									By clicking Sign Up, you agree to our <a href="javascript:;">Terms</a> and that you have read our <a href="javascript:;">Data Policy</a>, including our <a href="javascript:;">Cookie Use</a>.
+								</label>
+							</div>
+                        </div>
+                        <div class="register-buttons">
+                            <button type="submit" class="btn btn-primary btn-block btn-lg">Sign Up</button>
+                        </div>
+                        <div class="m-t-20 m-b-40 p-b-40">
+                            Already a member? Click <a href="login.html">here</a> to login.
+                        </div>
+                    </form>
+                </div>
+                <!-- end register-content -->
+            </div>
+            <!-- end right-content -->
+        </div>
+        <!-- end register -->
+	</div>
+	<!-- end page container -->
+</body>
+
+<!-- ================== BEGIN BASE JS ============================== -->
+<script src="assets/plugins/jquery/jquery-3.2.1.min.js"></script>
+<script src="assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+<script src="assets/plugins/bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
+<script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="assets/plugins/js-cookie/js.cookie.js"></script>
+<script src="assets/js/theme/transparent.min.js"></script>
+<script src="assets/plugins/gritter/js/jquery.gritter.js"></script>
+<script src="assets/js/atlantisApps.js"></script>
+<script src="assets/js/apps.min.js"></script>
+<!-- ================== END BASE JS ================================ -->
+
+<!-- ================== BEGIN PAGE LEVEL JS ======================== -->
+<script src="assets/plugins/parsley/dist/parsley.js"></script>
+<!-- ================== END PAGE LEVEL JS ========================== -->
+
+<script>
+
+$(document).ready(function() {
+
+    atlantisApp.init();
+    App.init();
+    
+});
+
+
+</script>
+
+
+</html>

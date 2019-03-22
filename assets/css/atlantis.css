@@ -1,0 +1,1204 @@
+/*
+Project Name: Atlantis-X
+Author: Jason M George
+Website: http://www.atlantis-x.com
+    -------------------------------------------
+        Atlantis CSS CONTENT TABLE
+    -------------------------------------------
+
+    ::  1.0 General Reset & Setup
+    -------------------------------------------
+        1.1 Additional Fonts
+        1.2 Login and Registration Logos
+        1.3 Page Title Icon Margins
+        1.4 Side Bar Overrides
+        1.5 Content Container Overrides
+        1.6 Footer Overrides
+        1.7 Page Cover
+        1.8 Headers
+        1.9 Panels
+        1.10 Buttons
+        1.11 SQL Containers 
+        1.12 Tables
+        1.13 Notifications
+        1.14 jsTree
+        1.15 Dropdowns
+        1.16 Slimscroll
+        1.17 Nav-Tabs
+        1.18 Summernote
+        1.19 Date Range Picker
+        1.20 Modals
+        1.21 Tag-it
+
+
+    ::  2.0 Helpers
+    -------------------------------------------
+        2.1 Responsive Design
+        2.2 Hidden
+        2.3 Edit Mode
+        2.4 Rows
+        2.5 Panels
+        2.6 Refreshing
+
+
+    ::  3.0 Background Colors
+    -------------------------------------------
+        3.1 Default
+        3.2 Primary
+        3.3 Success
+        3.4 Warning
+        3.5 Danger
+        3.6 Purple
+        
+    
+    ::  4.0 Object Browser
+    -------------------------------------------
+        4.1 Item Container
+        4.2 Item Header
+        4.3 Item Info
+
+
+    ::  5.0 ACE Editor
+    -------------------------------------------
+        5.1 Keyword
+        5.2 Function
+        5.3 String
+        5.4 Numeric
+        5.5 Selection
+        5.6 Auto Complete
+
+
+    ::  6.0 SQL Runner
+    -------------------------------------------
+        6.1 Connections Selector
+
+
+    ::  7.0 Data Sets
+    -------------------------------------------
+        7.1 Data Set Item Lists
+        7.2 Data Set Items
+    
+
+    ::  8.0 Icon Picker
+    -------------------------------------------
+        8.0 Icon Picker
+    
+
+    ::  9.0 Report Builder
+    -------------------------------------------
+        9.1 Connection Selector
+        9.2 Report Items
+
+    ::  10.0 Custom Dashboards
+    -------------------------------------------
+        10.1 General Dashboard
+        10.2 Dash Stat
+
+    
+
+*/
+
+
+
+/*  1.0 General reset & setup
+-------------------------------------------- */
+
+/* 1.1 Additional Fonts */
+
+@font-face {
+    font-family: "Atlantean";
+    src: url(fonts/Atlantean.ttf) format("truetype");
+}
+
+.atlantean {
+    font-family: "Atlantean";
+    text-transform: lowercase;
+}
+
+
+/* 1.2 Login and Registration Logos */
+
+.atlantisHeaderLogo {
+    font-family: "Atlantean";
+    text-transform: lowercase;
+    vertical-align: middle;
+    font-size: 30px;
+}
+
+
+/* 1.3 Page Title Icon Margins */
+
+h1>i, h2>i, h3>i, h4>i, h5>i, h6>i {
+    margin-right: 5px;
+}
+
+h1>i.fa-table {
+    vertical-align: -1px
+}
+
+.fa-x {
+    font-size: 18px;
+    color: #ff3502;
+    cursor: pointer;
+}
+
+/* 1.4 Side Bar Overrides */
+.sidebar, .sidebar-bg {
+    width: 200px;
+}
+
+.sidebar .nav>li>a i.fa-mobile {
+    font-size: 20px;
+}
+
+.sidebar-minify-btn {
+    margin: 10px 0px;
+}
+
+
+/* 1.5 Content Container Overrides */
+.content {
+    margin-left: 200px
+}
+
+
+/* 1.6 Footer Overrides */
+.footer {
+    z-index: 1010;
+    padding: 10px 0;
+    margin: 0 30px 0 230px;
+    border-top: 1px solid rgba(255,255,255,.15);
+    line-height: 20px;
+    position: relative;
+}
+
+
+/*  1.7 Page Cover  */
+
+.page-cover {
+    background-image: url(../img/page-cover.jpg);
+}
+
+
+/*  1.8 Headers  */
+.header.navbar-default {
+    background-color: rgba(0, 0, 0)
+}
+
+.register-mobile-header-image {
+    height: 75px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+
+/*  1.9 Panels  */
+.panel-heading {
+    padding: 5px 15px;
+    border: none;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    color: white;
+}
+
+.panel-title .fa {
+    font-size: 18px;
+    vertical-align: -2px;
+    margin-right: 10px;
+}
+
+
+/* 1.10 Buttons */
+button i {
+    margin-right: 5px;
+}
+
+.btn-row a+a{
+    margin-left: 5px;
+}
+
+a i.fa-caret-down {
+    margin-left: 10px;
+}
+
+
+/* 1.11 SQL Containers  */
+.sql-container pre {
+    background: transparent;
+}
+
+.form-group .sql-container {
+    border-radius: .25rem;
+    background: rgba(255,255,255,.25);
+    padding: 5px;
+}
+
+.form-group .sql-container.parsley-error {
+    border: 1px solid;
+}
+
+
+
+/* 1.12 Tables  */
+table th:not(:first-child),
+table td:not(:first-child) {
+    text-align: center;
+}
+
+
+table.dataTable thead>tr>th.sorting {
+    padding-right: 15px !important;
+}
+
+.dataTables_wrapper .dataTables_length select,
+.dataTables_wrapper .dataTables_filter .form-control {
+    height: 25px !important;
+}
+
+
+/* 1.13 Notifications  */
+.gritter-close:before,
+.gritter-light .gritter-close:before {
+
+    line-height: 5px !important;
+
+}
+
+.gritter-top,
+.gritter-bottom {
+    height: 15px;
+}
+
+.gritter-title-only .gritter-top,
+.gritter-title-only .gritter-bottom {
+    height: 20px;
+}
+
+.gritter-item-wrapper i {
+    font-size: 25px;
+    margin-right: 10px;
+    vertical-align: -5px;
+}
+
+
+.gritter-primary i {
+    color: #006cff;
+}
+.gritter-primary .gritter-close {
+    border-left: 2px solid #006cff;
+}
+
+.gritter-success i {
+    color: #04c142;
+}
+.gritter-success .gritter-close {
+    border-left: 2px solid #04c142;
+}
+
+.gritter-info i {
+    color: #00cbff;
+}
+.gritter-info .gritter-close {
+    border-left: 2px solid #00cbff;
+}
+
+.gritter-warning i {
+    color: #ff7b01;
+}
+.gritter-warning .gritter-close {
+    border-left: 2px solid #ff7b01;
+}
+
+.gritter-danger i {
+    color: #ff3502;
+}
+.gritter-danger .gritter-close {
+    border-left: 2px solid #ff3502;
+}
+
+.gritter-purple i {
+    color: #9800ff;
+}
+.gritter-purple .gritter-close {
+    border-left: 2px solid #9800ff;
+}
+
+.alert i {
+    font-size: 20px;
+    vertical-align: -2px;
+    margin-right: 10px;
+}
+
+
+/* 1.14 jsTree  */
+.jstree-ocl {
+    opacity: .75;
+}
+
+
+/* 1.15 Dropdowns  */
+.dropdown-menu.show {
+    background: #3a3a3a;
+}
+
+.dropdown-menu.show a {
+    color: #d2d2d2;
+}
+
+.dropdown-menu.show a:hover {
+    background-color: #6c6c6c;
+    color: #fff;
+}
+
+
+/* 1.16 Slimscroll  */
+.slimScrollBar {
+    display: none !important;
+}
+
+
+/* 1.17 Nav-Tabs  */
+.nav-tabs {
+    background: unset;
+}
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-link:hover,
+.nav.nav-tabs>li.active>a,
+.nav.nav-tabs>li.active>a:focus,
+.nav.nav-tabs>li.active>a:hover,
+.nav.nav-tabs>li>a.active,
+.nav.nav-tabs>li>a.active:focus,
+.nav.nav-tabs>li>a.active:hover {
+    background: rgba(0,0,0,.25);
+}
+
+.nav-tabs .nav-link i{
+    font-size: 14px;
+    margin-right: 5px;
+    vertical-align: -1px;
+}
+
+.tab-content {
+    background: rgba(0,0,0,.25);
+}
+
+
+/* 1.18 Summernote  */
+.panel-heading.note-toolbar {
+    background: transparent;
+}
+
+.note-editable.panel-body {
+    border: none;
+    border-top: 1px solid #3d3d3f;
+    border-radius: 0px;
+}
+
+.note-editor.note-frame .note-statusbar {
+    background-color: rgba(255,255,255,0)!important;
+}
+
+.note-editor.note-frame .note-statusbar .note-resizebar .note-icon-bar {
+
+    border-top: none !important;
+}
+
+
+/* 1.19 Date Range Picker  */
+body .daterangepicker {
+    z-index: 99999999!important;
+}
+
+
+/* 1.20 Modals  */
+.modal .btn.btn-default {
+    color: #fff;
+    background: rgba(255,255,255,.25);
+}
+
+.modal-content {
+    background: #3a3a3a;
+}
+
+.modal-header {
+    border-bottom-color: rgb(81, 86, 83);
+}
+
+.modal-header .close{
+    color: #b0b0b0;
+}
+
+.modal-footer {
+    border-top-color: rgb(81, 86, 83);
+}
+
+.modal h1, .modal h2, .modal h3, .modal h4, .modal h5, .modal h6 {
+    color: #b0b0b0;
+}
+
+/* 1.21 Tag-it  */
+.tagit-new {
+    width: 15px;
+}
+
+
+/*  2.0 Helpers
+-------------------------------------------- */
+
+/* 2.1 Responsive Design */
+
+@media (min-width: 768px){
+    .hidden-desktop {
+        display: none !important;
+    }
+    .pull-right-desktop {
+        float: right;
+    }
+}
+
+
+/* 2.2 Hidden */
+.hidden {
+    display: none !important;
+}
+
+
+/* 2.3 Edit Mode */
+.content[edit-mode=true] [edit-mode-hide] {
+    display: none;
+}
+
+.content[edit-mode=false] [edit-mode-show] {
+    display: none;
+}
+
+[contenteditable="true"] {
+    outline: none;
+    border: 1px solid #8c8c8c;
+    border-radius: 3px;
+}
+
+
+/* 2.4 Rows */
+.row-100 {
+    height: 100%;
+}
+
+
+/* 2.5 Panels */
+.panel-100 {
+    height: 100%;
+}
+
+
+/* 2.6 Refreshing  */
+.btn.refreshing .fa {
+    animation: fa-spin 2s infinite linear;
+}
+
+.btn.refreshing .fa:before {
+    content: "\f021";
+}
+
+
+/*  3.0 Background Colors
+-------------------------------------------- */
+
+/* 3.1 Default  */
+.btn.btn-warning,
+.btn:not(:disabled):not(.disabled).active,
+.btn:not(:disabled):not(.disabled):active,
+.btn.btn-yellow {
+    color: #fff;
+}
+
+.btn-default:hover, 
+.btn-default:focus, 
+.show > .btn-default.dropdown-toggle,
+.open > .dropdown-toggle.btn-default,
+.open > .dropdown-toggle.btn-default:hover,
+.open > .dropdown-toggle.btn-default:focus {
+    background: rgba(255,255,255,.25) !important;
+
+}
+
+.btn-default.active, 
+.btn-default.active.focus, 
+.btn-default.active:focus, 
+.btn-default.active:hover, 
+.btn-default:not(:disabled):not(.disabled).active {
+    background: #006cff !important;
+
+}
+
+
+/* 3.2 Primary */
+.btn-primary:hover, 
+.btn-primary:focus, 
+.btn-primary:active, 
+.btn-primary.active, 
+.btn-primary.active.focus, 
+.btn-primary.active:focus, 
+.btn-primary.active:hover, 
+.btn-primary:active.focus, 
+.btn-primary:active:focus, 
+.btn-primary:active:hover,
+.show > .btn-primary.dropdown-toggle,
+.open > .dropdown-toggle.btn-primary,
+.open > .dropdown-toggle.btn-primary:hover,
+.open > .dropdown-toggle.btn-primary:focus,
+.btn-primary:not(:disabled):not(.disabled).active, 
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-default[data-favorite-object="primary"],
+.btn-default[data-favorite-object="primary"]:hover,
+.btn-default[data-favorite-object="primary"]:focus,
+.panel-primary > .panel-heading,
+.content[data-atlantis-object-color=primary] .panel-heading.panel-content-heading,
+/*.content[data-atlantis-object-color=primary] .btn[data-toggle="dropdown"],*/
+.content[data-atlantis-object-color="primary"] .btn.refreshing,
+.content[data-atlantis-object-color="primary"] .btn.active,
+.content[edit-mode=true] .data-set-item[data-set-item-type="metric"]:before,
+.report-items-dropzone [data-set-item-type="metric"]{
+    background: #006cff !important;
+    color: #fff !important;
+}
+
+
+/* 3.3 Success */
+.btn-success:hover, 
+.btn-success:focus, 
+.btn-success:active, 
+.btn-success.active, 
+.btn-success.active.focus, 
+.btn-success.active:focus, 
+.btn-success.active:hover, 
+.btn-success:active.focus, 
+.btn-success:active:focus, 
+.btn-success:active:hover,
+.show > .btn-success.dropdown-toggle,
+.open > .dropdown-toggle.btn-success,
+.open > .dropdown-toggle.btn-success:hover,
+.open > .dropdown-toggle.btn-success:focus,
+.btn-success:not(:disabled):not(.disabled).active, 
+.btn-success:not(:disabled):not(.disabled):active,
+.btn-default[data-favorite-object="success"],
+.btn-default[data-favorite-object="success"]:hover,
+.btn-default[data-favorite-object="success"]:focus,
+.panel-success > .panel-heading,
+.content[data-atlantis-object-color=success] .panel-heading.panel-content-heading,
+/*.content[data-atlantis-object-color=success] .btn[data-toggle="dropdown"],*/
+.content[data-atlantis-object-color="success"] .btn.refreshing,
+.content[data-atlantis-object-color="success"] .btn.active,
+.content[edit-mode=true] .data-set-item[data-set-item-type="attribute"]:before,
+.report-items-dropzone [data-set-item-type="attribute"] {
+    background: #04c142 !important;
+    color: #fff !important;
+}
+
+
+/* 3.4 Warning */
+.btn-warning:hover, 
+.btn-warning:focus, 
+.btn-warning:active, 
+.btn-warning.active, 
+.btn-warning.active.focus, 
+.btn-warning.active:focus, 
+.btn-warning.active:hover, 
+.btn-warning:active.focus, 
+.btn-warning:active:focus, 
+.btn-warning:active:hover,
+.show > .btn-warning.dropdown-toggle,
+.open > .dropdown-toggle.btn-warning,
+.open > .dropdown-toggle.btn-warning:focus,
+.open > .dropdown-toggle.btn-warning:hover,
+.btn-warning:not(:disabled):not(.disabled).active, 
+.btn-warning:not(:disabled):not(.disabled):active,
+.btn-default[data-favorite-object="warning"],
+.btn-default[data-favorite-object="warning"]:hover,
+.btn-default[data-favorite-object="warning"]:focus,
+.panel-warning > .panel-heading,
+.content[data-atlantis-object-color=warning] .panel-heading.panel-content-heading,
+/*.content[data-atlantis-object-color=warning] .btn[data-toggle="dropdown"],*/
+.content[data-atlantis-object-color="warning"] .btn.refreshing,
+.content[data-atlantis-object-color="warning"] .btn.active,
+.content[edit-mode=true] .data-set-item[data-set-item-type="date"]:before,
+.report-items-dropzone [data-set-item-type="date"]  {
+    background: #ff7b01 !important;
+    color: #fff !important;
+}
+
+
+/* 3.5 Danger */
+.btn-danger:hover, 
+.btn-danger:focus, 
+.btn-danger:active, 
+.btn-danger.active, 
+.btn-danger.active.focus, 
+.btn-danger.active:focus, 
+.btn-danger.active:hover, 
+.btn-danger:active.focus, 
+.btn-danger:active:focus, 
+.btn-danger:active:hover,
+.show > .btn-danger.dropdown-toggle,
+.open > .dropdown-toggle.btn-danger,
+.open > .dropdown-toggle.btn-danger:hover,
+.open > .dropdown-toggle.btn-danger:focus,
+.btn-danger:not(:disabled):not(.disabled).active, 
+.btn-danger:not(:disabled):not(.disabled):active,
+.btn-default[data-favorite-object="danger"],
+.btn-default[data-favorite-object="danger"]:hover,
+.btn-default[data-favorite-object="danger"]:focus,
+.panel-danger > .panel-heading,
+.content[data-atlantis-object-color=danger] .panel-heading.panel-content-heading,
+/*.content[data-atlantis-object-color=danger] .btn[data-toggle="dropdown"],*/
+.content[data-atlantis-object-color="danger"] .btn.refreshing,
+.content[data-atlantis-object-color="danger"] .btn.active {
+    background: #ff3502 !important;
+    color: #fff !important;
+}
+
+
+/* 3.6 Purple */
+.btn-purple:hover, 
+.btn-purple:focus, 
+.btn-purple:active, 
+.btn-purple.active, 
+.btn-purple.active.focus, 
+.btn-purple.active:focus, 
+.btn-purple.active:hover, 
+.btn-purple:active.focus, 
+.btn-purple:active:focus, 
+.btn-purple:active:hover,
+.show > .btn-purple.dropdown-toggle,
+.open > .dropdown-toggle.btn-purple,
+.open > .dropdown-toggle.btn-purple:hover,
+.open > .dropdown-toggle.btn-purple:focus,
+.btn-purple:not(:disabled):not(.disabled).active, 
+.btn-purple:not(:disabled):not(.disabled):active,
+.btn-default[data-favorite-object="purple"],
+.btn-default[data-favorite-object="purple"]:hover,
+.btn-default[data-favorite-object="purple"]:focus,
+.panel-purple > .panel-heading,
+.content[data-atlantis-object-color=purple] .panel-heading.panel-content-heading,
+/*.content[data-atlantis-object-color=purple] .btn[data-toggle="dropdown"],*/
+.content[data-atlantis-object-color="purple"] .btn.refreshing,
+.content[data-atlantis-object-color="purple"] .btn.active {
+    background: #9800ff !important;
+    color: #fff !important;
+}
+
+
+/* 3.7 Pink */
+.btn-pink:hover, 
+.btn-pink:focus, 
+.btn-pink:active, 
+.btn-pink.active, 
+.btn-pink.active.focus, 
+.btn-pink.active:focus, 
+.btn-pink.active:hover, 
+.btn-pink:active.focus, 
+.btn-pink:active:focus, 
+.btn-pink:active:hover,
+.show > .btn-pink.dropdown-toggle,
+.open > .dropdown-toggle.btn-pink,
+.open > .dropdown-toggle.btn-pink:hover,
+.open > .dropdown-toggle.btn-pink:focus,
+.btn-pink:not(:disabled):not(.disabled).active, 
+.btn-pink:not(:disabled):not(.disabled):active,
+.btn-default[data-favorite-object="pink"],
+.btn-default[data-favorite-object="pink"]:hover,
+.btn-default[data-favorite-object="pink"]:focus,
+.panel-pink > .panel-heading,
+.content[data-atlantis-object-color=pink] .panel-heading.panel-content-heading,
+/*.content[data-atlantis-object-color=purple] .btn[data-toggle="dropdown"],*/
+.content[data-atlantis-object-color="pink"] .btn.refreshing,
+.content[data-atlantis-object-color="pink"] .btn.active {
+    background: #ff0081 !important;
+    color: #fff !important;
+}
+
+
+/*  4.0 Object Browser
+-------------------------------------------- */
+
+/* 4.1 Item Container */
+#object_browser_items_containter.gallery .image a:focus,
+#object_browser_items_containter.gallery .image a:hover {
+    opacity: 1;
+}
+
+
+/* 4.2 Item Header */
+#object_browser_items_containter.gallery .image-header {
+    color: rgb(255, 255, 255);
+    display: block ;
+    border-radius: .25rem .25rem 0 0;
+    font-size: 25px ;
+    font-weight: 600 ;
+    padding: 0;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+/* 4.3 Item Info */
+#object_browser_items_containter.gallery .image-info .title {
+    margin: 0 0 0px;
+    height: 40px;
+    line-height: 18px;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: unset;
+}
+
+#object_browser_items_containter.gallery .image-info .desc {
+    margin-top: 10px;
+    line-height: 16px;
+    font-size: 12px;
+    overflow: hidden;
+}
+
+#object_browser_items_containter.gallery .image-info .owner {
+    margin-top: 10px;
+}
+
+#object_browser_items_containter.gallery .image-info .db {
+    margin-bottom: 20px;
+}
+
+
+
+/*  5.0 ACE Editor
+-------------------------------------------- */
+
+/* 5.1 Keyword */
+.ace-monokai .ace_keyword {
+    color: #00B7FF !important;
+}
+
+
+/* 5.2 Function */
+.ace-monokai .ace_support.ace_function {
+    color: #10ff00 !important;
+}
+
+
+/* 5.3 String */
+.ace-monokai .ace_string{
+    color: #fff061 !important;
+}
+
+
+/* 5.4 Numeric */
+.ace-monokai .ace_constant.ace_language,
+.ace-monokai .ace_constant.ace_numeric,
+.ace-monokai .ace_db-table-name {
+    color: #df74ff !important;
+}
+
+
+/* 5.5 Selection */
+.ace-monokai .ace_marker-layer .ace_selection {
+    background: rgba(97, 100, 104, 0.35) !important;
+}
+
+
+/* 5.6 Auto Complete */
+.ace_editor.ace_autocomplete {
+    background: #2f2f2f !important;
+    color: #a9a9a9 !important;
+    border: 1px #5b5b5b solid !important;
+}
+
+.ace_editor.ace_autocomplete .ace_completion-highlight {
+    color: white !important;
+    text-shadow: 0 0 0.01em;
+}
+
+.ace_editor.ace_autocomplete .ace_marker-layer .ace_active-line {
+    background-color: #1b1b1b !important;
+    z-index: 1;
+}
+
+.ace_editor.ace_autocomplete .ace_line-hover {
+    border: 1px solid #5b5b5b !important;
+    background: #1b1b1b !important;
+}
+
+
+/*  6.0 SQL Runner
+-------------------------------------------- */
+
+/* 6.1 Connection Selector */
+.connection-selector {
+    margin-top: 10px;
+    padding-left: 6px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+
+/*  7.0 Data Sets
+-------------------------------------------- */
+
+/* 7.1 Data Set Item Lists */
+.data-set-item-list {
+    min-height: 32px;
+}
+
+.data-set-item-list.editor {
+    height: 32px;
+    overflow: hidden;
+}
+
+/* 7.2 Data Set Items */
+.data-set-item {
+    color: #fff;
+    padding: 7px 10px 7px 15px;
+    font-size: 12px;
+    line-height: 16px;
+    position: relative;
+    background: rgba(0,0,0,.25);
+    margin-bottom: 10px;
+}
+
+.data-set-item.ui-sortable-placeholder {
+    margin-bottom: 8px !important;
+}
+
+.data-set-item[data-set-item-type="date"] {
+    border-color: #ff7b01;
+    border-style: solid;
+    border-width: 0px 2px;
+}
+.data-set-item[data-set-item-type="attribute"] {
+    border-color: #04c142;
+    border-style: solid;
+    border-width: 0px 2px;
+}
+.data-set-item[data-set-item-type="metric"] {
+    border-color: #006cff;
+    border-style: solid;
+    border-width: 0px 2px;
+}
+
+.content[edit-mode=true] .data-set-item {
+    cursor: -webkit-grab;
+    padding: 7px 10px 7px 35px;
+    border: none;
+}
+
+.content[edit-mode=true] .data-set-item.ui-sortable-helper,
+.content[edit-mode=true] .data-set-item:active {
+    cursor: -webkit-grabbing;
+}
+
+.content[edit-mode=true] .data-set-item:before {
+    content: '';
+    font-family: Font Awesome\ 4 Free,Font Awesome\ 4 Pro,FontAwesome;
+    font-weight: 900;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 25px;
+    text-align: center;
+    line-height: 16px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    color: #fff;
+    font-size: 12px;
+}
+
+.content[edit-mode=true] .sortable .data-set-item:before {
+    content: '\f0c9';
+    font-family: Font Awesome\ 4 Free,Font Awesome\ 4 Pro,FontAwesome;
+}
+
+.content[edit-mode=true] .draggable .data-set-item:before {
+    content: '\f047';
+    font-family: Font Awesome\ 4 Free,Font Awesome\ 4 Pro,FontAwesome;
+}
+
+.data-set-item-edit-zone.ui-droppable-active { 
+    outline: 1px dashed #82868b !important;
+}
+
+
+/*  8.0 Icon Picker
+-------------------------------------------- */
+.dropdown-menu.iconpicker-container {
+    left: -180px;
+    background: #3a3a3a;
+}
+
+.iconpicker-popover.popover {
+    width: 238px;
+    background: transparent;
+}
+
+.iconpicker-popover.popover .popover-title {
+    background: transparent;
+    border-bottom: 1px solid #515653;
+}
+
+.iconpicker-popover.popover .iconpicker .iconpicker-items {
+    background: transparent;
+}
+
+.iconpicker-popover.popover .popover-content {
+    padding: 12px;
+    min-width: unset;
+    background: transparent;
+}
+
+.iconpicker .iconpicker-item {
+    color: #fff;
+    background: #6c6c6c;
+    box-shadow: none;
+
+}
+
+.iconpicker .iconpicker-item:hover:not(.iconpicker-selected) {
+    background-color: #6c6c6c;
+}
+
+
+/*  9.0 Report Builder
+-------------------------------------------- */
+
+/* 9.1 Connection Selector */
+.data-set-selector {
+    margin-top: 10px;
+    padding-left: 6px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.data-set-items-container {
+    margin-top: 15px;
+    height: 500px;
+    overflow: hidden;
+}
+
+/* 9.2 Report Items */
+.report-data-set-item {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.report-data-set-item > div{
+    display: inline-block;
+}
+
+.report-data-set-item .report-data-set-item-info {
+    width: 80%;
+    background: rgba(0,0,0,.25);
+    padding: 7px 10px 7px 15px;
+    font-size: 12px;
+}
+
+.report-data-set-item .report-data-set-item-info[data-set-item-type="date"] {
+    border-color: #ff7b01;
+    border-style: solid;
+    border-width: 0px 2px;
+}
+.report-data-set-item .report-data-set-item-info[data-set-item-type="attribute"] {
+    border-color: #04c142;
+    border-style: solid;
+    border-width: 0px 2px;
+}
+.report-data-set-item .report-data-set-item-info[data-set-item-type="metric"] {
+    border-color: #006cff;
+    border-style: solid;
+    border-width: 0px 2px;
+}
+
+.report-data-set-item .report-data-set-item-icons {
+    float: right;
+    padding: 7px 0px;
+    font-size: 14px;
+    text-align: justify;
+}
+
+.report-data-set-item .report-data-set-item-icons i {
+    margin-left: 7px;
+}
+
+
+[data-report-item="false"] .report-item {
+    color: transparent;
+}
+
+[data-filter-item="false"] .filter-item {
+    color: transparent;
+}
+
+.content[edit-mode=true] .report-data-set-item .report-data-set-item-info {
+    cursor: -webkit-grab;
+}
+
+.content[edit-mode=true] .report-data-set-item .report-data-set-item-info.ui-sortable-helper,
+.content[edit-mode=true] .report-data-set-item .report-data-set-item-info:active {
+    cursor: -webkit-grabbing;
+}
+
+
+.report-items-dropzone,
+.filter-items-dropzone {
+    box-shadow: none;
+    line-height: 1.42857143;
+    min-height: 34px;
+    padding: 6px 0px;
+    color: #fff;
+    background: transparent;
+}
+.report-items-dropzone .label {
+    display: inline-block;
+    font-size: 12px;
+    margin: 1px 5px 5px 0px;
+    padding: 5px 10px;
+}
+
+.report-items-dropzone i {
+    display: unset;
+    margin-left: 7px;
+}
+
+.report-items-dropzone i:hover {
+    color: #9e9e9e;
+    cursor: pointer;
+}
+
+.report-items-dropzone.ui-droppable-active,
+.filter-items-dropzone.ui-droppable-active { 
+    outline: 1px dashed #82868b !important;
+}
+
+/* 9.3 Filter Items */
+.report-filter-rule {
+    margin-bottom: 10px;
+}
+
+.report-filter-rule .report-filter-rule-label {
+    padding-top: 7px;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.report-filter-rule .report-filter-rule-label i {
+    vertical-align: 1px;
+    margin-right: 5px;
+    cursor: -webkit-grab;
+}
+
+.report-filter-rule.ui-sortable-helper .report-filter-rule-label i,
+.report-filter-rule.ui-sortable-helper .report-filter-rule-label i:active {
+    cursor: -webkit-grabbing;
+}
+
+.report-filter-rule .report-filter-rule-criteria input {
+    /*min-width: 165px;*/
+}
+
+.report-filter-rule .report-filter-rule-criteria .tagit.ui-widget {
+    height: unset;
+    min-height: 30px;
+    padding: 1px 5px!important;
+}
+
+.report-filter-rule-verbiage {
+    display: block;
+    font-size: 12px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.report-filter-rule-verbiage[data-set-item-type="date"] i {
+    color: #ff7b01;
+}
+
+.report-filter-rule-verbiage[data-set-item-type="attribute"] i {
+    color: #04c142;
+}
+
+.report-filter-rule-verbiage[data-set-item-type="metric"] i {
+    color: #006cff;
+}
+
+.content[edit-mode=false] .report-filter-rule {
+    display: none;
+}
+.content[edit-mode=true] .report-filter-rule-verbiage {
+    display: none;
+}
+
+.filter-items-sortable .ui-sortable-placeholder {
+    margin-bottom: 14px !important;
+}
+
+
+
+/*  10.0 Custom Dashbaords
+-------------------------------------------- */
+
+/* 10.1 General Dashboard */
+
+.dashboard-container {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.dashboard-container .widget,
+.dashboard-container .panel {
+    margin-bottom: unset;
+}
+
+.dashboard-container .grid-stack-item-content .panel-inverse>.panel-heading.panel-content-heading {
+    background-color: #000 !important;
+}
+
+
+
+
+
+/* 10.2 Dash Stat */
+.widget-dash-stat .widget-stats .stats-info h4 {
+    text-transform: uppercase;
+}
+
+.widget-dash-stat .widget-stats .stats-link {
+    display: block;
+    margin: 15px -15px -15px;
+    padding: 7px 15px;
+    background: rgba(0,0,0,.4);
+    text-align: left;
+    color: #fff;
+    color: rgba(255,255,255,.7);
+    text-decoration: none;
+    min-height: 31px;
+}
+
+
+.widget-dash-stat .widget-stats .stats-icon {
+    font-size: 60px;
+    height: 56px;
+    width: 56px;
+    text-align: center;
+    line-height: 56px;
+    margin-left: 15px;
+    color: #000;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    opacity: .15;
+}
+
+
+.widget-share-widget .panel-body .form-group:first-child {
+    margin-top:25px;
+}
