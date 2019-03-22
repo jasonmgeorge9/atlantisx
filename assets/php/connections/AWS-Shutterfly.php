@@ -7,10 +7,10 @@ include '../helperVault.php';
 $sql = $_POST["sql"];
 
 $apiVault = apiVault();
-$hostname="localhost";
-$username = "ulysses_admin";
-$password = $apiVault["ulysses"];
-$dbname="Ulysses";
+$hostname="jdbc:redshift://10.143.183.36:5439/dwhprod?ssl=true&sslfactory=com.amazon.redshift.ssl.NonValidatingFactory";
+$username = "appcia_tableau_rs";
+$password = $apiVault["aws_shutterfly"];
+$dbname="dwhprod";
 
 $mysqli = new mysqli($hostname, $username, $password, $dbname);
 
